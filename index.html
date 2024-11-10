@@ -3,51 +3,112 @@
 <head>
     <title>The End Of Worlds - Keslly Albuquerque Santos</title>
     <style>
-        body {
-            font-family: 'Georgia', serif;
-            color: #444;
-            background: #e0e0e0;
-            line-height: 1.6em;
-            margin: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 1em;
-            text-align: center;
-        }
-        .book-cover {
-            width: 30%;
-            height: auto;
-            max-width: 250px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .book-cover:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
-        }
-        .book-title {
-            font-size: 2.2em;
-            margin-top: 1em;
-        }
-        .author-name {
-            font-size: 1.5em;
-            margin-bottom: 2em;
-        }
-        .buttons a {
-            display: inline-block;
-            background: #666;
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 10px;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-        .buttons a:hover {
-            background: #888;
-        }
+body {
+    font-family: 'Georgia', serif;
+    color: #444;
+    background: #e0e0e0;
+    line-height: 1.6em;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 100%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em;
+    text-align: center;
+}
+
+/* Estilo da Capa do Livro */
+.book-cover {
+    width: 50%; /* Ajusta a largura da capa para ser menor em telas grandes */
+    max-width: 250px; /* Limita a largura máxima para garantir um melhor ajuste */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.book-cover:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do Título do Livro */
+.book-title {
+    font-size: 1.8em; /* Mantém um bom tamanho para garantir visibilidade sem dominar o layout */
+    margin-top: 0.5em;
+}
+
+.author-name {
+    font-size: 1.3em; /* Mantém um bom equilíbrio com o título e capa */
+    margin-bottom: 1em;
+}
+
+/* Estilo dos Botões */
+.buttons a {
+    display: inline-block;
+    background: #666;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 25px; /* Aumenta levemente o tamanho do botão para destacar em telas grandes */
+    margin: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-size: 1.1em; /* Tamanho da fonte ajustado para melhorar a visibilidade */
+}
+
+.buttons a:hover {
+    background: #888;
+}
+
+/* Estilos para Tornar o Design Responsivo */
+@media (max-width: 768px) {
+    .book-cover {
+        width: 65%; /* Reduz a largura da capa para garantir uma melhor adaptação na tela */
+        max-width: none; /* Remove a limitação da largura máxima em telas menores */
+    }
+
+    .book-title {
+        font-size: 1.6em; /* Ajusta o tamanho do título para telas pequenas */
+    }
+
+    .author-name {
+        font-size: 1.1em; /* Ajusta o tamanho do nome do autor em telas menores */
+    }
+
+    .buttons a {
+        width: 90%; /* Os botões ocupam quase toda a largura do container */
+        padding: 10px; /* Mantém o padding confortável para cliques */
+        font-size: 1em; /* Ajusta o tamanho da fonte para melhor visualização */
+        margin: 5px auto; /* Ajusta o espaçamento para centralizar os botões em dispositivos menores */
+    }
+
+    .container {
+        padding: 0.5em; /* Ajusta o padding para melhorar a visualização em telas menores */
+    }
+}
+
+@media (min-width: 1024px) {
+    .book-cover {
+        width: 30%; /* A capa ocupa menos espaço para dar mais ênfase aos outros elementos */
+        max-width: 200px; /* Define uma largura máxima menor para evitar que a capa domine o layout */
+    }
+
+    .book-title {
+        font-size: 1.9em; /* Aumenta um pouco o tamanho do título em telas grandes */
+    }
+
+    .author-name {
+        font-size: 1.5em; /* Aumenta levemente o tamanho do nome do autor */
+    }
+
+    .buttons a {
+        padding: 15px 30px; /* Aumenta o padding dos botões para um visual mais equilibrado */
+        font-size: 1.2em; /* Aumenta o tamanho da fonte para tornar o botão mais visível */
+    }
+}
     </style>
 </head>
 <body>
